@@ -1,13 +1,16 @@
 
+<!--Using data binding to display the title of the app-->
 <h1>{{title}}</h1>
 <br>
+<!--calling the method onStarDBLclicked when the star image is double clicked to show or hide the h2 message-->
 <img (dblclick)="onStarDBLClicked()" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg"
 height="42" width="42">
+<!--using databinding to change the visibilityy of this heading-->
 <h2 [hidden] = "show">Look at the star</h2>
 <br>
+<!--Calling the nButtonClicked() method when the button id clicked that displays the number of times that the button has been clicked-->
 <button (click)="onButtonClicked()">Press Me</button>
 <h3>The number of times the button has been pressed is: {{thisNum}}</h3>
 
 <!--calling the list component using selectors-->
-<h2>test</h2>
 <app-list></app-list>
