@@ -1,0 +1,32 @@
+<!--Creating an unordered list in the list.component-->
+<ul>
+    <!--Displaying the first index of the presidents array-->
+    <li>{{thepres[0]}}</li>
+
+    <!--Using ngFor tio display all the elemsnts in the presidents array-->
+    <!--ngFor is a structural directive. It is imported from the CommonModule Angular Modile -->
+    <li *ngFor="let pres of thepres">
+        {{pres}}
+    </li>
+</ul>
+<hr>
+
+<ol>
+    <!--Using @for to track each element (president) in the presidents array-->
+    <!--This template is used as a loop. Unlike *ngFor, it is already built into angular so there is no need to import anything -->
+    @for(pres of thepres; track pres)
+    {
+     <li>{{pres}}</li> <!--Displays all the elements in the array as an ordered list-->
+    }
+</ol>
+<hr>
+
+<!--ising the @for to display the name and term of each president in the presidents array-->
+<ul>
+    @for(president of presidents; track president)
+    {
+        <!--displays both objects as an unordered list-->
+        <li>{{president.name}} {{president.term}}</li>
+    }
+</ul>
+
